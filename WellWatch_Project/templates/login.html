@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellwatch.in| Login</title>
+    <link rel="stylesheet"href="/static/css/login.css">
+</head>
+<body background="home.png">
+    <div class="box">
+        <form method='post'>
+        {% csrf_token %}
+        {% load static %}
+        <h2 class="heading1">Wellwatch</h2>
+        <h4 class="heading2">Welcome back!</h4>
+        <input type="text" id="username" name="username" placeholder="Enter your username" class="input"><br>
+        <input type="password" id="password" name="passwd" placeholder="Enter your password" class="input"><br>
+        <button type='submit' class="btn">Log in to Wellwatch</button>
+        <p>Not a member?<a href="/SignUp" class="link">Sign up</a></p>
+        <a href="abc.com" class="link">Forgot your password?</a>
+        <p class="footer">by continuing,you agree to Wellwatch's <a href="abc.com"class="a">terms</a> and acknowlwdge you've read our <a href="abc.com"class="a">privacy policy</a></p>
+        </form>
+    </div>
+</body>
+</html>

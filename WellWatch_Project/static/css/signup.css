@@ -1,0 +1,36 @@
+body
+{
+    background-color: rgb(255, 255, 255);
+    
+}
+img
+{
+    height:100px;
+    width:100px;
+    margin-left: 320px;
+}
+.form
+{
+    position:relative;
+    left:350px;
+    height:600px;
+    width:750px;
+    border: 5px solid #197e62;
+    border-radius: 14px;
+    color: #197e62;
+    font-size: medium;
+    
+
+}
+h1
+{
+    color: #197e62;
+    text-align: center;
+    text-decoration: underline;
+}
+form
+{
+    position:absolute;
+    background-color:rgb(200, 145, 227); 
+    left:20px;
+}

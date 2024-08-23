@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellwatch.in |  SignUp</title>
+    <link rel="stylesheet" href="static/css/signup.css">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'>
+</head>
+<body>
+        <div class="form">
+            <h1>Sign up</h1>
+            <form action="#" method="post">
+                {% csrf_token %}
+                {% load static %}
+                <fieldset style="border: 2px solid rgb(255, 255, 255); border-radius:5px;position:absolute; left:40px; width:600px; background-color: rgb(255, 255, 255);">
+                <legend>Personal Details:</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="uname"><br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="mail" id="email" name="umail"><br>
+                <br>
+                <label for="usern">Userame:</label>
+                <input type="text" id="usern" name="username"><br>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="passwd" name="passwd"><br>
+                <br>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="uage"><br>
+                <br>
+                <label for="gender">Select Gender:</label>
+                <br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">MALE</label><br>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">FEMALE</label><br>
+                <br>
+                <label for="height">Height(in cm):</label>
+                <input type="text" id="height" name="uheight"><br>
+                <br>
+                <label for="weight">Weight(in kg):</label>
+                <input type="text" id="weight" name="uweight"><br>
+                <br>
+                
+                <label for="Bloodgroup">Select Blood Group:</label>
+                <br>
+                <select id="bloodgroup" name="bloodgroup" size="1">
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">AB+</option>
+                    <option value="O-">AB-</option>
+                    
+                </select>
+                
+                <br>
+                <br>
+                <input type="submit" onclick="alert('You are now signed in!')">
+
+    
+
+                </fieldset>
+            </form>
+        </div>
+</body>
+</html>

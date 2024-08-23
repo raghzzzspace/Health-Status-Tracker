@@ -1,0 +1,127 @@
+#navbar{
+    width:100%;
+    height: 14%;
+    background-color: #b6d8d3;
+    flex-wrap: wrap;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabs{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    margin-left: 10px;
+}
+#logo{
+    color:#197e62;
+    font-family: cursive;
+    font-size:22px;
+}
+a{
+    text-decoration: none;
+    color:#197e62;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.inputs{
+    display:flex;
+    gap:10px;
+    margin-right: 10px;
+}
+.hello_user{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color:#197e62;
+}
+.all_tabs{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(108px, 1fr));
+    margin: 40px -8px 15px;
+    overflow: hidden;
+}
+.tab{
+    display:inline-flex;
+    align-content: center;
+    padding: 25px;
+    border:1px solid #b6d8d3;
+    border-radius: 14px;
+    background-color: #d0faf4 ;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.tab_img{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 6px;
+}
+.tab_name{
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: bold;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+    color: #197e62;
+    text-decoration: none;
+}
+.footer{
+    width:100%;
+    background-color: #b6d8d3;
+}
+.logo_name{
+    display:flex;
+    gap:30px;
+    justify-content: center;
+}
+.logo{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+}
+.name{
+    color:#197e62;;
+    font-size: larger;
+}
+.links{
+    display:flex;
+    height:80%;
+    justify-content: center;
+    gap:20px;
+}
+li{
+    margin-bottom: 10px;
+}
+.about{
+    font-size: larger;
+}
+.aboutlinks{
+    color:black;
+}
+.social_media{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+}
+.socialmedia_links{
+    display:flex;
+    gap:15px;
+    align-content: center;
+}
+#insta{
+    height:20px;
+    border-radius: 14px;
+}
+#twitter{
+    height:20px;
+    border-radius: 14px;
+}
+#copyright{
+    font-weight: 300;
+    flex-grow: 1;
+    padding: 10px;
+    color: grey;
+    text-align: center;
+}

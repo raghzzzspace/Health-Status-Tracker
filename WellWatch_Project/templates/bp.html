@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wellwatch.in | BP Categorizer </title>
+    <link rel="stylesheet" href="/static/css/bp.css">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div class="tabs">
+                <div class="logo1">
+                    <a id="logo"href="/Home">Wellwatch.in</a>
+                </div>
+                <div class="events">
+                    <a href="/Events" target="_self">Events</a>
+                </div>
+                <div class="tab_">
+                    <a href="/Tabs" target="_self">Tabs</a>
+                </div>
+                <div class="contact">
+                    <a href="/ContactUs" target="_self">Contact Us</a>
+                </div>
+                <div class="about us">
+                    <a href="/AboutUs" target="_self">About Us</a>
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="login">
+                    <a href="/Info" target="_self">My Info</a>
+                </div>
+                <div class="login">
+                    <a href="/Logout" target="_self">Log out</a>
+                </div>
+                <div class="profile">
+                    <a href="/Profile"><i style="font-size: 25px;"class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form">
+        <h1>BLOOD PRESSURE</h1>
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <fieldset style="border: 2px solid rgb(255, 255, 255); border-radius:5px;position:absolute; left:40px; width:600px; background-color: rgb(255, 255, 255);">
+            <label for="sbp">SYSTOLIC BP:</label>
+            <input type="text" id="sbp" name="sbp"><br>
+            <br>
+            <label for="dbp">DIASTOLIC BP:</label>
+            <input type="text" id="dbp" name="dbp"><br>
+            <br>
+            <input type="submit" onclick="alert('Submitted!')" style="height:20px; width:100px;background-color: #0f8b6c; color: white; margin-left:10px;">
+ 
+        </form>
+    </div>
+   
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+            <h2 style='color:red;text-align:center;font:Arial;'>{{variable}}</h2>
+            <h3 style='color:blue;font:Arial;text-align:center;'>A BLOOD PRESSURE READING GIVES TWO NUMBERS.</h4>
+            <h3 style='color:green;font:Arial;text-align:center;'>The top systolic reading gives the pressure of your blood on your arteries at it travels around your body.</h3>
+            <h3 style='color:green;font:Arial;text-align:center;'>The bottom diastolic reading is the lowest pressure on your arteries when your heart rests between beats.</h3>
+            <img src="/static/img/bp.png" style="margin-left:330px; width:800px; height:400px;">
+</div>
+<footer>
+    <div class="footer">
+        <div class="logo_name">
+            
+            <div class="name">
+                <h2 style="font-family: cursive;">Wellwatch</h2>
+            </div>
+        </div>
+        <div class="links">
+            <div class="aboutlinks">
+                <ul class="about">
+                    <li><a style="text-decoration:none;" href="/AboutUs">About Us</a></li>
+                    <li><a href="/ContactUs">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="aboutlinks">
+                <ul class="about1">
+                    <li>Your Privacy & Security</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="social_media">
+            <a href="mailto:hello@wellwatch.com">hello@wellwatch.com</a> 
+            <div class="socialmedia_links">
+                <div class="insta">
+                    <img id="insta"src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_640.jpg">
+                </div>
+                <div class="twitter">
+                    <img id="twitter"src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png">
+                </div>
+            </div>
+        </div>
+        <p id="copyright">Copyright ® 2024 Wellwatch, Inc. All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>

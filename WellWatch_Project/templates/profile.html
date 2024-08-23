@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellwatch.in | Profile</title>
+    <link rel="stylesheet" href="static/css/profile.css">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div class="tabs">
+                <div class="logo1">
+                    <a id="logo"href="/Home">Wellwatch.in</a>
+                </div>
+                <div class="events">
+                    <a href="/Events" target="_self">Events</a>
+                </div>
+                <div class="tab_">
+                    <a href="/Tabs" target="_self">Tabs</a>
+                </div>
+                <div class="contact">
+                    <a href="/ContactUs" target="_self">Contact Us</a>
+                </div>
+                <div class="about us">
+                    <a href="/AboutUs" target="_self">About Us</a>
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="login">
+                    <a href="/Info" target="_self">My Info</a>
+                </div>
+                <div class="login">
+                    <a href="/Logout" target="_self">Log out</a>
+                </div>
+                <div class="profile">
+                    <a href="/Profile"><i style="font-size: 25px;"class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% if user_profile %}
+    <div class="user">
+        <i class="fa-solid fa-user fa-2xl" style="color: #0f8b6c;"></i>
+        <h1>Hello, {{user_profile.name }}</h1>
+        <div class="emptydiv"></div>
+    </div>
+    <div class="basicinfo">
+        <h2 style="color: #046f65; margin-left:30px;">Basic Details</h2>
+        <div class="detail"><h3>Age: {{ user_profile.age }} years</h3></div>
+        <div class="detail"><h3>Gender: {{ user_profile.gender }}</h3></div>
+        <div class="detail"><h3>Height: {{ user_profile.height }}cm</h3></div>
+        <div class="detail"><h3>Weight: {{ user_profile.weight }}kg</h3></div>
+        <div class="detail"><h3>Blood Group: {{ user_profile.bloodgroup }}</h3></div>
+    </div>
+    {% else %}
+        <p><h2>INVALID USER</h2></p>
+    {% endif %}
+    <h2 style="color:#046f65; margin-left: 10px; text-align: center;">Complete/Update Profile?</h2>
+    <div class="form">
+        <h2 style="margin-left: 20px;">Address Details</h2>
+        <form action='' method='post'>
+            {% csrf_token %}
+            {% load static %}
+            <fieldset style="border: 2px solid rgb(255, 255, 255); border-radius:5px;position:absolute; left:40px; width:600px; background-color: rgb(255, 255, 255);">
+            <label for="address" class="formtext1">Address:</label><br>
+            <input type="text" id="address" name="address" class="formbox"><br>
+            <br>
+            <label for="city" class="formtext1">City:</label><br>
+            <input type="text" id="city" name="city" class="formbox"><br>
+            <br>
+            <label for="address" class="formtext1">State/Province:</label><br>
+            <input type="text" id="state" name="state" class="formbox"><br>
+            <br>
+            
+            <label for="country" class="formtext1">Country:</label><br>
+            <input type="text" id="country" name="country" class="formbox"><br>
+            <br>
+            <label for="pcode" class="formtext1">Postal Code:</label><br>
+            <input type="text" id="pcode" name="pcode" class="formbox" placeholder="122011"
+            pattern="[0-9]{6}"><br>
+            <br>
+            
+
+
+            </fieldset>
+        
+    </div>
+    <br>
+    <br>
+
+    <div class="form2">
+        <h2 style="margin-left: 20px;">Contact Details</h2>
+        
+            <fieldset style="border: 2px solid rgb(255, 255, 255); border-radius:5px;position:absolute; left:40px; width:600px; background-color: rgb(255, 255, 255);">
+            <label for="pno" class="formtext1">Phone Number:</label><br>
+            <input type="text" id="pno" name="pno" class="formbox"  placeholder="1234567890"
+            pattern="[0-9]{10}"><br>
+            <br>
+            
+
+
+            </fieldset>
+        
+    </div>
+    <br>
+    <br>
+    <div class="form2">
+        <h2 style="margin-left: 20px;">Anything Else?</h2>
+        
+            <fieldset style="border: 2px solid rgb(255, 255, 255); border-radius:5px;position:absolute; left:40px; width:600px; background-color: rgb(255, 255, 255);">
+            <label for="extra" class="formtext1">Is there anything else you wish to tell us?</label><br>
+            <textarea id="extra" name="extra" rows="4" cols="50"></textarea>
+            <br>
+            
+            </fieldset>
+    
+    </div>
+    <br>
+    <br>
+    <div class="form2">
+        <h2 style="margin-left: 20px;">Feedback</h2>
+        
+            <fieldset style="border: 2px solid rgb(255, 255, 255); border-radius:5px;position:absolute; left:40px; width:600px; background-color: rgb(255, 255, 255);">
+            <label for="feedback" class="formtext1">Have a Feedback?</label><br>
+            <textarea id="fedback" name="feedback" rows="4" cols="50"></textarea>
+            <br>
+            
+            </fieldset>
+        
+    </div>
+    <br>
+    <br>
+    <input type="submit" onclick="alert('Submitted!')" style="height:40px; width:100px;background-color: #0f8b6c; color: white; margin-left:10px;">
+    <br>
+    <br>
+    </form>
+    
+    <footer>
+        <div class="footer">
+            <div class="logo_name">
+                
+                <div class="name">
+                    <h2 style="font-family: cursive;">Wellwatch</h2>
+                </div>
+            </div>
+            <div class="links">
+                <div class="aboutlinks">
+                    <ul class="about">
+                        <li><a style="text-decoration:none;" href="/AboutUs">About Us</a></li>
+                        <li><a href="/ContactUs">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="aboutlinks">
+                    <ul class="about1">
+                        <li>Your Privacy & Security</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms & Services</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social_media">
+                <a href="mailto:hello@wellwatch.com">hello@wellwatch.com</a> 
+                <div class="socialmedia_links">
+                    <div class="insta">
+                        <img id="insta"src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_640.jpg">
+                    </div>
+                    <div class="twitter">
+                        <img id="twitter"src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png">
+                    </div>
+                </div>
+            </div>
+            <p id="copyright">Copyright ® 2024 Wellwatch, Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
